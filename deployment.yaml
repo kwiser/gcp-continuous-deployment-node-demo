@@ -1,6 +1,8 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  labels:
+    run: server
   name: server
 spec:
   replicas: 2
@@ -19,7 +21,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: 'placeholder'
+          image: gcr.io/epresences/server:latest
           ports:
             - containerPort: 4242
           env:
