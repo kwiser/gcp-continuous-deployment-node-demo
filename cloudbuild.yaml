@@ -34,7 +34,7 @@ steps:
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=$_CLUSTER_ZONE'
     - 'CLOUDSDK_CONTAINER_CLUSTER=$_CLUSTER_NAME'
-    images: [
+images: [
      'gcr.io/$PROJECT_ID/server:$BRANCH_NAME-$COMMIT_SHA',
      'gcr.io/$PROJECT_ID/server:latest'
     ]
