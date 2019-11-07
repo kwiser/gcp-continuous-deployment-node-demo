@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -8,22 +8,20 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      run: server
+      run: <app-name>
   strategy:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 1
-      maxUnavailable: 1
+      maxUnavailable: 1    
   template:
     metadata:
       labels:
-        app: server
+        run: server
     spec:
       containers:
-        - name: server
-          image: gcr.io/epresences/server:latest
-          ports:
-            - containerPort: 4242
-          env:
-            - name: NODE_ENV
-              value: "production"
+      - image: gcr.io/epresences/server:latest
+        name: server
+        ports:
+        - containerPort: 4242
+        
