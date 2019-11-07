@@ -1,6 +1,6 @@
 FROM node:8-wheezy
 
-ARG buildtime_variable=staging
+ARG buildtime_variable=production
 ENV NODE_ENV=$buildtime_variable
 
 
