@@ -1,13 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name:  server
+  name: server
 spec:
   selector:
-    app:  server
+     run: server
   ports:
-    - name:  server
-      protocol: TCP
-      port: 80
-      targetPort: 4242
+  - protocol: TCP
+    port: 80
+    targetPort: 4242
   type: LoadBalancer
