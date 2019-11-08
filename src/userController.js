@@ -14,6 +14,11 @@ const users = [
     name: 'Janet Dane',
     age: 29,
   },
+  {
+    id: 4,
+    name: 'krunal ',
+    age: 30,
+  },
 ];
 
 exports.getAllUsers = getAllUsers;
