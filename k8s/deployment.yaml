@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: $_SEVER_NAME
-  name: $_SEVER_NAME
+    run: maindeployment
+  name: maindeployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      run: $_SEVER_NAME
+      run: maindeployment
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        run: $_SEVER_NAME
+        run: maindeployment
     spec:
       containers:
       - image: gcr.io/epresences/$_SEVER_NAME:latest
-        name: $_SEVER_NAME
+        name: maindeployment
         ports:
         - containerPort: 4242
         
