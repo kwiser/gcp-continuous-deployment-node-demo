@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: maindeployment
-  name: maindeployment
+    run: main
+  name: main
 spec:
   replicas: 2
   selector:
     matchLabels:
-      run: maindeployment
+      run: main
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       labels:
-        run: maindeployment
+        run: main
     spec:
       containers:
       - image: gcr.io/epresences/$_SEVER_NAME:latest
