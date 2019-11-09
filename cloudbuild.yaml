@@ -28,7 +28,7 @@ steps:
      'set', 
      'image', 
      'deployment', 
-     'server', 
+     '$_SEVER_NAME', 
      '$_SEVER_NAME=gcr.io/$PROJECT_ID/$_SEVER_NAME:$BRANCH_NAME-$COMMIT_SHA'
     ]
     env:
