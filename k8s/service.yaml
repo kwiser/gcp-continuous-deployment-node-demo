@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: $_SEVER_NAME
+  name: demo
 spec:
   selector:
      run: $_SEVER_NAME
