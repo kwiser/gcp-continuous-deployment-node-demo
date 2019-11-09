@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - image: gcr.io/epresences/$_SEVER_NAME:latest
-        name: maindeployment
+        name: main
         ports:
         - containerPort: 4242
         
