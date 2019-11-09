@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: main
-  name: main
+    run: server
+  name: server
 spec:
   replicas: 2
   selector:
     matchLabels:
-      run: main
+      run: server
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        run: main
+        run: server
     spec:
       containers:
-      - image: gcr.io/epresences/main:latest
-        name: main
+      - image: gcr.io/epresences/server:latest
+        name: server
         ports:
         - containerPort: 4242
         

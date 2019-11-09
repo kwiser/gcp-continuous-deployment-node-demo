@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: main
+  name: server
 spec:
   selector:
-     run: main
+     run: server
   ports:
   - protocol: TCP
     port: 80
