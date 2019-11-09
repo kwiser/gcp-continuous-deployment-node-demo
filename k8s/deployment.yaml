@@ -20,7 +20,7 @@ spec:
         run: main
     spec:
       containers:
-      - image: gcr.io/epresences/$_SEVER_NAME:latest
+      - image: gcr.io/epresences/main:latest
         name: main
         ports:
         - containerPort: 4242
