@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: server
+  name: $_SEVER_NAME
 spec:
   selector:
-     run: server
+     run: $_SEVER_NAME
   ports:
   - protocol: TCP
     port: 80
